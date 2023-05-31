@@ -26,7 +26,6 @@ public class BagMainTest {
     @Test(timeout = 50)
     public void TestEnhanceBagsTrue() {
         BagMain.enhanceBags(bags, true);
-        System.out.println(bags);
         assertEquals(4, bags[0].getCapacity());
         assertEquals(5, bags[1].getCapacity());
         assertEquals(6, bags[2].getCapacity());
@@ -35,7 +34,6 @@ public class BagMainTest {
     @Test(timeout = 50)
     public void TestEnhanceBagsFalse() {
         BagMain.enhanceBags(bags, false);
-        System.out.println(bags);
         assertEquals(3, bags[0].getCapacity());
         assertEquals(5, bags[1].getCapacity());
         assertEquals(5, bags[2].getCapacity());
