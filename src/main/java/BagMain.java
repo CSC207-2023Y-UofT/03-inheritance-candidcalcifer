@@ -24,9 +24,7 @@ class BagMain {
         }
         if (double_enhance_handbags){
             for (int a = 0; a <= (bags.length - 1); a++) {
-                if (bags[a] instanceof CrossbodyBag){
-                    ((CrossbodyBag) bags[a]).enhance();
-                } else {
+                if (bags[a] instanceof HandBag){
                     ((HandBag) bags[a]).enhance();
                 }
             }
