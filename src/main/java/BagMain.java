@@ -16,11 +16,19 @@ class BagMain {
      */
     public static void enhanceBags(Bag[] bags, boolean double_enhance_handbags) {
         for (int a = 0; a <= (bags.length - 1); a++) {
-            bags[a].enhance();
+            if (bags[a] instanceof CrossbodyBag){
+                ((CrossbodyBag) bags[a]).enhance();
+            } else {
+                ((HandBag) bags[a]).enhance();
+            }
         }
         if (double_enhance_handbags){
             for (int a = 0; a <= (bags.length - 1); a++) {
-                bags[a].enhance();
+                if (bags[a] instanceof CrossbodyBag){
+                    ((CrossbodyBag) bags[a]).enhance();
+                } else {
+                    ((HandBag) bags[a]).enhance();
+                }
             }
         }
     }
