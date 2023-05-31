@@ -16,12 +16,12 @@ class BagMain {
      */
     public static void enhanceBags(Bag[] bags, boolean double_enhance_handbags) {
         // TODO: Implement this.
-        for (Bag b : bags) {
-            b.enhance();
+        for (int a = 0; a <= bags.length; a++) {
+            bags[a].enhance();
         }
         if (double_enhance_handbags){
-            for (Bag b : bags) {
-                b.enhance();
+            for (int a = 0; a <= bags.length; a++) {
+                bags[a].enhance();
             }
         }
     }
@@ -40,7 +40,7 @@ class BagMain {
         int i = 0;
         for (Bag b : bags) {
             if (b instanceof CrossbodyBag){
-                i = i + 1;
+                i = i + ((CrossbodyBag) b).getNumberOfStraps();
             }
         }
         return i;
